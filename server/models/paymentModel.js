@@ -10,6 +10,13 @@ class Payment {
         this.destination =data.destination; 
     }
 
-    //getAll
+    static getAll(){
+        const payments = data.map( p => new Payment(p))
+        return payments; 
+    }
+
+
 
 }
+
+module.exports = Payment;
