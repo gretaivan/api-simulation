@@ -14,8 +14,12 @@ describe('API server', () => {
 
     afterAll((done) => {
         // close the server, then run done
-        console.log('Gracefully stopping test server');
+        console.log('Stopping test server');
         api.close(done);
+    });
+
+ test('responds to get / with status 200', (done) => {
+        request(api).get('/').expect(200, done);
     });
 
 
