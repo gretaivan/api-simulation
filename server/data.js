@@ -1,6 +1,6 @@
 let payments = [
     {
-      "id": "po_1IRc0NFYnBLVWstaKDPihS5n",
+      "id": 1,
       "object": "payout",
       "amount": 1100,
       "arrival_date": 1614944379,
@@ -24,7 +24,7 @@ let payments = [
       "type": "bank_account"
     },
     {
-      "id": "po_1IRc0NFYnBLFRsLaKDPihS5n",
+      "id": 2,
       "object": "payout",
       "amount": 100,
       "arrival_date": 1614944379,
@@ -48,7 +48,7 @@ let payments = [
       "type": "bank_account"
     },
     {
-      "id": "po_1IRc0NFZnGHFRsLaKDPihS5n",
+      "id": 3,
       "object": "payout",
       "amount": 723,
       "arrival_date": 1614944379,
