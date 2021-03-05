@@ -1,29 +1,51 @@
-const data = require('../data')
+// const data = require('../data')
+
+let data = [
+    {
+      "id": 1,
+      "amount": 1100,
+      "arrival_date": 1614944379,
+      "created": 1614944379,
+      "currency": "gbp",
+      "destination": "ba_1IRc0NFYnBLVWstaX4V2uRC6"
+    },
+    {
+      "id": 2,
+      "amount": 100,
+      "arrival_date": 1614944379,
+      "automatic": true,
+      "currency": "usd",
+      "destination": "ba_1IRc0NFnOBLVWstaX4V2uRC6"
+    },
+    {
+      "id": 3,
+      "amount": 723,
+      "arrival_date": 1614944379,
+      "created": 1614944379,
+      "currency": "gbp",
+      "destination": "ba_1IRc0NFnOBLVWoQlX4V2uRC6"
+    }
+]
+
+data = JSON.stringify(data)
+
 
 class Payment {
-    constructor(){
-        this.id = data.id; 
-        this.amount = data.amount; 
-        this.arrivalDate = data.arrival_date;
-        this.currency = data.currency; 
-        this.created = data.created; 
-        this.destination =data.destination; 
+    constructor(pData){
+        this.id = pData.id;
+        this.amount = pData.amount; 
+        this.arrivalDate = pData.arrival_date;
+        this.currency = pData.currency; 
+        this.created = pData.created; 
+        this.destination =pData.destination; 
     }
-<<<<<<< HEAD
-
     static get getAll(){
-        const payments = data.map((p) => new Payment(p));
+        const payments = data
+        console.log(payments)
         return payments; 
     }
 
-    getAmount(id) {
-=======
-    static getAll(){
-        const payments = data.map( p => new Payment(p))
-        return payments; 
-    }
  getAmount(id) {
->>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
         try {
             const paymentData = data.filter((payment) => payment.id === id)[0];
             const payment = new Payment(paymentData);
@@ -52,20 +74,5 @@ class Payment {
         data.splice(data.indexOf(data), 1)
 
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
 }
-
-
-
-   
-module.exports = Payment;
-<<<<<<< HEAD
-    
-
-    
-=======
->>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
+module.exports = Payment; 

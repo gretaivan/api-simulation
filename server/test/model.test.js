@@ -5,7 +5,7 @@ const paymentData = require('../data');
 const Payment = require('../models/paymentModel');
 
 describe('Payment model', () => {
-    const testPayment = {
+    const testPayment = [{
         "id": "po_1IRc0NFYnBLVWstaKDPihS5n",
         "object": "payout",
         "amount": 1100,
@@ -28,7 +28,7 @@ describe('Payment model', () => {
         "statement_descriptor": null,
         "status": "in_transit",
         "type": "bank_account"
-      }
+      }];
 
     //get all payments
     test('return all payments', () => {
