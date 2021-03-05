@@ -4,7 +4,7 @@
   "description": "Project to simulate api functionality and test server-side functions",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon server/index.js",
     "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent"
   },
