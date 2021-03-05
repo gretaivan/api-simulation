@@ -1,7 +1,7 @@
 // import data
 const paymentRoute = require('../data');
 // import model
-const Cat = require('../models/paymentModel');
+const Payment = require('../models/paymentModel');
 
 //get all payments
 
