@@ -9,6 +9,7 @@ class Payment {
         this.created = data.created; 
         this.destination =data.destination; 
     }
+<<<<<<< HEAD
 
     static get getAll(){
         const payments = data.map((p) => new Payment(p));
@@ -16,6 +17,13 @@ class Payment {
     }
 
     getAmount(id) {
+=======
+    static getAll(){
+        const payments = data.map( p => new Payment(p))
+        return payments; 
+    }
+ getAmount(id) {
+>>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
         try {
             const paymentData = data.filter((payment) => payment.id === id)[0];
             const payment = new Payment(paymentData);
@@ -44,9 +52,20 @@ class Payment {
         data.splice(data.indexOf(data), 1)
 
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
 }
 
+
+
+   
 module.exports = Payment;
+<<<<<<< HEAD
     
 
     
+=======
+>>>>>>> 59cc5cc5b6cc3cd86c794ba7c627ff9c201638f9
