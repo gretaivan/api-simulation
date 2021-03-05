@@ -1,10 +1,11 @@
 // import data
-const paymentRoute = require('../data');
+const { TestScheduler } = require('@jest/core');
+const paymentData = require('../data');
 // import model
 const Payment = require('../models/paymentModel');
 
 describe('Payment model', () => {
-    {
+    const testPayment{
         "id": "po_1IRc0NFYnBLVWstaKDPihS5n",
         "object": "payout",
         "amount": 1100,
@@ -29,16 +30,25 @@ describe('Payment model', () => {
         "type": "bank_account"
       }
 
+    //get all payments
+    test('return all payments', () => {
+        const payments = Payment.getAll; 
+        expect(payments).toEqual(paymentData)
+    });
 
 
-//get all payments
+    //get get one of them amount
 
+    //add new payment
 
-//get get one of them amount
+    //delete
+    test('delete a most recently done payment', () => {
+        const payment = paymentData[paymentData.length - 1]; 
+        payment.delete(); 
 
-//add new payment
-
-//delete
+        //perhaps check the payment that is about to be deleted data too?? 
+        expect(paymentData).not.toContain(payment); 
+    });
 
 
 });
