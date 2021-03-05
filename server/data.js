@@ -1,5 +1,5 @@
-let payments = {
-    "transaction #1": {
+let payments = [
+    {
       "id": "po_1IRc0NFYnBLVWstaKDPihS5n",
       "object": "payout",
       "amount": 1100,
@@ -23,7 +23,7 @@ let payments = {
       "status": "in_transit",
       "type": "bank_account"
     },
-    "transaction #2": {
+    {
       "id": "po_1IRc0NFYnBLFRsLaKDPihS5n",
       "object": "payout",
       "amount": 100,
@@ -47,7 +47,7 @@ let payments = {
       "status": "in_transit",
       "type": "bank_account"
     },
-    "transaction #3": {
+    {
       "id": "po_1IRc0NFZnGHFRsLaKDPihS5n",
       "object": "payout",
       "amount": 723,
@@ -71,4 +71,4 @@ let payments = {
       "status": "in_transit",
       "type": "bank_account"
     }
-  }
+]
