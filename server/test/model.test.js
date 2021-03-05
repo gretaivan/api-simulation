@@ -38,8 +38,16 @@ describe('Payment model', () => {
 
 
     //get get one of them amount
+    test('return transaction amount', () => {
+        const amount = Payment.getAmount(transactionID); 
+        expect(amount).toEqual(paymentData['amount'])
+    });
 
     //add new payment
+    test('create transaction', () => {
+        const createTransaction = Payment.createPayment; 
+        expect(createTransaction).toEqual(paymentData)
+    });
 
     //delete
     test('delete a most recently done payment', () => {
